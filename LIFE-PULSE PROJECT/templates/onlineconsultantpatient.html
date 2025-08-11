@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LifePulse | Online Consultation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4fdfd;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #009688;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, select, textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    label {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    button {
+      background-color: #009688;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #00796b;
+    }
+
+    .back-link {
+      margin-top: 20px;
+      display: inline-block;
+      color: #009688;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .availability-box {
+      background-color: #f0fbfa;
+      padding: 15px;
+      border-left: 4px solid #009688;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .availability-box h4 {
+      margin-bottom: 8px;
+      color: #00796b;
+    }
+
+    .availability-box ul {
+      padding-left: 20px;
+      list-style-type: square;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Online Consultation</h1>
+  <p>Connect with certified doctors anytime, anywhere.</p>
+</header>
+
+<div class="container">
+  <p>Please fill out the form below to schedule your consultation.</p>
+
+  <form action="thank-you.html" method="post">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="tel" name="phone" placeholder="Your Phone Number" required />
+
+    <label for="doctor">Select a Doctor:</label>
+    <select id="doctor" name="doctor" required>
+      <option value="" disabled selected>Select a Doctor</option>
+      <option value="ayesha">Dr. Ayesha (Cardiologist)</option>
+      <option value="imran">Dr. Imran (Dermatologist)</option>
+      <option value="fatima">Dr. Fatima (Neurologist)</option>
+    </select>
+
+    <!-- Availability Info Boxes (STATIC) -->
+    <div class="availability-box">
+      <h4>Dr. Ayesha Available:</h4>
+      <ul>
+        <li>Monday & Wednesday: 9:00 AM – 12:00 PM</li>
+        <li>Friday: 2:00 PM – 4:00 PM</li>
+      </ul>
+    </div>
+
+    <div class="availability-box">
+      <h4>Dr. Imran Available:</h4>
+      <ul>
+        <li>Tuesday & Thursday: 10:00 AM – 1:00 PM</li>
+        <li>Saturday: 11:00 AM – 3:00 PM</li>
+      </ul>
+    </div>
+
+    <div class="availability-box">
+      <h4>Dr. Fatima Available:</h4>
+      <ul>
+        <li>Monday, Wednesday, Friday: 3:00 PM – 6:00 PM</li>
+      </ul>
+    </div>
+
+    <label for="date">Select Date:</label>
+    <input type="date" id="date" name="date" required />
+
+    <label for="time">Select Time:</label>
+    <select id="time" name="time" required>
+      <option value="" disabled selected>Select a Time</option>
+      <option>09:00 AM</option>
+      <option>10:00 AM</option>
+      <option>11:00 AM</option>
+      <option>12:00 PM</option>
+      <option>02:00 PM</option>
+      <option>03:00 PM</option>
+      <option>04:00 PM</option>
+      <option>05:00 PM</option>
+      <option>06:00 PM</option>
+    </select>
+
+    <label for="message">Your Concern:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Write your concern here..." required></textarea>
+
+    <button type="submit">Schedule Consultation</button>
+  </form>
+
+  <a href="patient-dashboard.html" class="back-link">← Back to Dashboard</a>
+</div>
+
+</body>
+</html>

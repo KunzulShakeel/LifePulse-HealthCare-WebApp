@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor Messages</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0fbfc;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #007b83;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 14px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #e6f7f8;
+      color: #007b83;
+    }
+
+    .unread {
+      background-color: #fef6e4;
+    }
+
+    .badge {
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .unread-badge {
+      background-color: #ffc107;
+      color: #fff;
+    }
+
+    .read-badge {
+      background-color: #28a745;
+      color: #fff;
+    }
+
+    .reply-btn {
+      padding: 6px 14px;
+      background-color: #007b83;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .reply-btn:hover {
+      background-color: #005e61;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #007b83;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: #005e61;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📨 Patient Messages</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Patient Name</th>
+          <th>Message</th>
+          <th>Status</th>
+          <th>Reply</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="unread">
+          <td>9:20 AM</td>
+          <td>Sara Ali</td>
+          <td>I have a question about my prescription...</td>
+          <td><span class="badge unread-badge">Unread</span></td>
+          <td><button class="reply-btn">Reply</button></td>
+        </tr>
+        <tr>
+          <td>10:15 AM</td>
+          <td>Bilal Khan</td>
+          <td>Still feeling chest pain after meds.</td>
+          <td><span class="badge read-badge">Read</span></td>
+          <td><button class="reply-btn">Reply</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a href="doctor-dashboard.html" class="back-link">← Back to Dashboard</a>
+  </div>
+</body>
+</html>

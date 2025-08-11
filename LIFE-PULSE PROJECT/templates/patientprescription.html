@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LifePulse | Prescription History</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f4fdfd;
+      color: #333;
+    }
+
+    nav {
+      background-color: #009688;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .container h1 {
+      color: #009688;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .prescription-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 25px;
+    }
+
+    .prescription-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+      transition: 0.3s;
+    }
+
+    .prescription-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .prescription-card h3 {
+      font-size: 18px;
+      color: #00796B;
+      margin-bottom: 8px;
+    }
+
+    .prescription-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .prescription-card span {
+      display: block;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .prescription-card a {
+      text-decoration: none;
+      color: white;
+      background-color: #009688;
+      padding: 8px 15px;
+      border-radius: 8px;
+      display: inline-block;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .prescription-card a:hover {
+      background-color: #00796B;
+    }
+
+    .back-link {
+      margin-top: 30px;
+      display: block;
+      text-align: center;
+      color: #009688;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #009688;
+      color: white;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">LifePulse ❤️</div>
+    <ul>
+      <li><a href="patient-dashboard.html">Home</a></li>
+      <li><a href="#">Consultation</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Reports</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Section -->
+  <div class="container">
+    <h1>📋 Patient Prescription </h1>
+
+    <div class="prescription-list">
+
+      <div class="prescription-card">
+        <h3>🩺 Dr. Ahmed</h3>
+        <span>Date: Jan 25, 2025</span>
+        <p>Fever, cough, sore throat</p>
+        <a href="view-presciptionpatient.html">View Prescription</a>
+      </div>
+
+      <div class="prescription-card">
+        <h3>🩺 Dr. Sana</h3>
+        <span>Date: Feb 12, 2025</span>
+        <p>Headache, light sensitivity</p>
+        <a href="view-prescription.html">View Prescription</a>
+      </div>
+
+      <div class="prescription-card">
+        <h3>🩺 Dr. Faraz</h3>
+        <span>Date: Mar 8, 2025</span>
+        <p>Skin rash and redness</p>
+        <a href="view-prescription.html">View Prescription</a>
+      </div>
+
+    </div>
+
+    <a href="patientreport.html" class="back-link">← Back to My Reports</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 LifePulse. All rights reserved. | Contact: support@lifepulse.com
+  </footer>
+
+</body>
+</html>

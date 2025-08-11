@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor Login - LifePulse</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-box {
+      background-color: #fff;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      width: 320px;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #00b3b3;
+    }
+
+    .heart {
+      color: red;
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    h2 {
+      margin: 20px 0;
+      font-size: 22px;
+    }
+
+    input[type="username"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    .login-btn {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+  padding: 14px;
+  background: linear-gradient(135deg, #00b3b3, #007a7a);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+  text-decoration: none; /* makes the link look like a button */
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #00cccc, #009999);
+  transform: scale(1.03);
+}
+
+
+    .back-link {
+      margin-top: 15px;
+      display: block;
+      font-size: 14px;
+      color: #007a7a;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <div class="logo">Life<span>Pulse</span></div>
+    <div class="heart">❤️</div>
+    <h2>Doctor Login</h2>
+    <form>
+      <input type="username" placeholder="username" required />
+      <input type="password" placeholder="Password" required />
+      <a href="doctor-dashboard.html" class="login-btn">Log In</a>
+    </form>
+    <a href="option.html" class="back-link">← Back to Role Selection</a>
+  </div>
+</body>
+</html>

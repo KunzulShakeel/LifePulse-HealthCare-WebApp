@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LifePulse | My Appointments</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f4fdfd;
+      color: #333;
+    }
+
+    nav {
+      background-color: #009688;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .container h1 {
+      color: #009688;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .appointment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .appointment-card {
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .appointment-card h3 {
+      color: #00796b;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .appointment-card p {
+      font-size: 14px;
+      color: #555;
+      margin: 4px 0;
+    }
+
+    .appointment-card span.status {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: white;
+      background-color: #00796b;
+    }
+
+    .appointment-card span.status.past {
+      background-color: #9e9e9e;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #009688;
+      color: white;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    .back-link {
+      margin-top: 20px;
+      display: inline-block;
+      color: #009688;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">LifePulse ❤️</div>
+    <ul>
+      <li><a href="patient-dashboard.html">Home</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Appointments Section -->
+  <div class="container">
+    <h1>📅 My Appointments</h1>
+
+    <div class="appointment-list">
+
+      <div class="appointment-card">
+        <h3>Dr. Sarah Ahmed — General Physician</h3>
+        <p><strong>Date:</strong> May 25, 2025</p>
+        <p><strong>Time:</strong> 11:00 AM</p>
+        <p><strong>Mode:</strong> Video Consultation</p>
+        <span class="status">Upcoming</span>
+      </div>
+
+      <div class="appointment-card">
+        <h3>Dr. Ali Raza — Cardiologist</h3>
+        <p><strong>Date:</strong> April 20, 2025</p>
+        <p><strong>Time:</strong> 3:00 PM</p>
+        <p><strong>Mode:</strong> In-Person</p>
+        <span class="status past">Completed</span>
+      </div>
+
+      <div class="appointment-card">
+        <h3>Dr. Hira Khan — Dermatologist</h3>
+        <p><strong>Date:</strong> March 10, 2025</p>
+        <p><strong>Time:</strong> 5:30 PM</p>
+        <p><strong>Mode:</strong> Video Consultation</p>
+        <span class="status past">Completed</span>
+      </div>
+      <a href="patient-dashboard.html" class="back-link">← Back to Dashboard</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 LifePulse. All rights reserved. | Contact: support@lifepulse.com
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  <title>LifePulse | Patient Dashboard</title>  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">  
+  <style>  
+    * {  
+      margin: 0;  
+      padding: 0;  
+      font-family: 'Poppins', sans-serif;  
+      box-sizing: border-box;  
+    }  
+
+    body {  
+      background-color: #f4fdfd;  
+    }  
+
+    nav {  
+      background-color: #009688;  
+      color: white;  
+      padding: 15px 30px;  
+      display: flex;  
+      justify-content: space-between;  
+      align-items: center;  
+      flex-wrap: wrap;  
+    }  
+
+    nav .logo {  
+      font-size: 26px;  
+      font-weight: bold;  
+    }  
+
+    nav ul {  
+      display: flex;  
+      list-style: none;  
+      gap: 25px;  
+      flex-wrap: wrap;  
+    }  
+
+    nav ul li a {  
+      text-decoration: none;  
+      color: white;  
+      font-weight: 500;  
+      transition: 0.3s;  
+    }  
+
+    nav ul li a:hover {  
+      text-decoration: underline;  
+    }  
+
+    .container {  
+      padding: 50px 20px 30px;  
+      max-width: 1100px;  
+      margin: 0 auto;  
+      text-align: center;  
+    }  
+
+    .container h1 {  
+      color: #009688;  
+      margin-bottom: 10px;  
+      font-size: 32px;  
+    }  
+
+    .container p {  
+      color: #555;  
+      font-size: 16px;  
+    }  
+
+    .features {  
+      display: grid;  
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));  
+      gap: 25px;  
+      margin-top: 40px;  
+    }  
+
+    .card {  
+      background-color: white;  
+      padding: 30px 25px;  
+      border-radius: 15px;  
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);  
+      transition: transform 0.3s, box-shadow 0.3s;  
+      cursor: pointer;  
+      text-align: center;  
+      text-decoration: none;  
+    }  
+
+    .card:hover {  
+      transform: translateY(-6px);  
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);  
+    }  
+
+    .card h3 {  
+      color: #00796b;  
+      font-size: 20px;  
+      margin-bottom: 10px;  
+    }  
+
+    .card p {  
+      font-size: 14px;  
+      color: #555;  
+    }  
+
+    /* Updated Video Call Box Styles */  
+    .video-call-box {  
+      display: flex;  
+      flex-direction: column;  
+      justify-content: space-between;  
+      height: 300px;  
+      padding: 20px;  
+      position: relative;  
+    }  
+
+    .video-call-box .video-placeholder {  
+      flex: 1;  
+      display: flex;  
+      justify-content: center;  
+      align-items: center;  
+      background-color: #e0e0e0;  
+      border: 2px dashed #009688;  
+      border-radius: 10px;  
+      margin-bottom: 15px;  
+      color: #555;  
+      font-size: 16px;  
+    }  
+
+    .video-call-box button {  
+      background-color: #009688;  
+      color: white;  
+      padding: 10px 20px;  
+      border: none;  
+      border-radius: 8px;  
+      cursor: pointer;  
+      transition: background-color 0.3s;  
+      align-self: center;  
+    }  
+
+    .video-call-box button:hover {  
+      background-color: #00796b;  
+    }  
+
+    footer {  
+      margin-top: 60px;  
+      padding: 20px;  
+      background-color: #009688;  
+      color: white;  
+      text-align: center;  
+      font-size: 14px;  
+    }  
+
+    @media (max-width: 600px) {  
+      nav {  
+        flex-direction: column;  
+        align-items: flex-start;  
+      }  
+      nav ul {  
+        margin-top: 10px;  
+        flex-direction: column;  
+        gap: 10px;  
+      }  
+    } 
+    
+  </style>  
+</head>  
+<body>  
+
+  <nav>  
+    <div class="logo">LifePulse ❤️</div>  
+    <ul>   
+      <li><a href="#">Contact Us📞</a></li>  
+      <li><a href="#">FAQs❔</a></li>   
+      <li><a href="patient-login.html">Logout ⏻</a></li>  
+    </ul>  
+  </nav>  
+
+  <div class="container">  
+    <h1>Welcome to LifePulse, Patient!</h1>  
+    <p>Reliable healthcare at your fingertips — all in one place.</p>  
+
+    <section class="features">  
+      <a href="onlineconsultantpatient.html" class="card">  
+        <h3>🩺 Online Consultation</h3>  
+        <p>Instantly connect with certified doctors anytime, anywhere.</p>  
+      </a>  
+      <a href="patientreport.html" class="card">  
+        <h3>📁 My Reports</h3>  
+        <p>Securely access your lab results, scans, and health records.</p>  
+      </a>  
+      <a href="editprofilepatient.html" class="card">  
+        <h3>👤 Edit Profile</h3>  
+        <p>Update your personal details and medical history easily.</p>  
+      </a>  
+      <a href="patientappoinment.html" class="card">  
+        <h3>📅 Appointments</h3>  
+        <p>View, reschedule, or book new appointments in seconds.</p>  
+      </a>  
+      <a href="patientmessage.html" class="card">  
+        <h3>💬 Messages</h3>  
+        <p>You have no new messages.</p>  
+      </a>  
+    
+  <a href="patientvediocall.html" class="card">  
+    <h3>📹 Video Consultation</h3>  
+    <p>Connect with your doctor in real-time via video.</p>  
+    <button type="button" style="margin-top: 15px; background-color: #009688; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer;" >Start Video Call</button>  
+  </a> 
+    </section>  
+
+  </div>  
+
+  <footer>  
+    &copy; 2025 LifePulse. All rights reserved. | Contact: support@lifepulse.com  
+  </footer>  
+
+</body>  
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Patient Records</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0f2f1;
+      margin: 0;
+      padding: 0;
+      color: #37474f;
+    }
+
+    header {
+      background-color: #009688;
+      padding: 20px;
+      border-bottom: 4px solid #00796B;
+      color: #ffffff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #00796B;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #b2dfdb;
+      border-radius: 6px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      background-color: #f9f9f9;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    th {
+      background-color: #e0f2f1;
+      font-weight: bold;
+      color: #00796B;
+    }
+
+    .highlight {
+      font-weight: bold;
+      background-color: #fef3c7;
+    }
+
+    .back-link {
+      margin-top: 20px;
+      display: block;
+      text-align: center;
+      color: #00796B;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+      cursor: pointer;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🔍 Search Patient Records</h1>
+  </header>
+
+  <div class="container">
+    <h2>Find Patients by Name or Disease</h2>
+    <input type="text" id="searchInput" onkeyup="searchPatient()" placeholder="Search by patient name or disease...">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Disease</th>
+          <th>Last Visit</th>
+        </tr>
+      </thead>
+      <tbody id="patientTable">
+        <tr>
+          <td>Sara Ali</td>
+          <td>29</td>
+          <td>Diabetes</td>
+          <td>2024-12-01</td>
+        </tr>
+        <tr>
+          <td>Bilal Khan</td>
+          <td>45</td>
+          <td>Chest Pain</td>
+          <td>2025-01-15</td>
+        </tr>
+        <tr>
+          <td>Ayesha Noor</td>
+          <td>34</td>
+          <td>Consultation</td>
+          <td>2025-03-10</td>
+        </tr>
+        <tr>
+          <td>Imran Qureshi</td>
+          <td>50</td>
+          <td>Hypertension</td>
+          <td>2025-02-25</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <a href="doctor-dashboard.html" class="back-link">← Back to Dashboard</a>
+
+  <script>
+    function searchPatient() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const rows = document.getElementById('patientTable').getElementsByTagName('tr');
+      for (let i = 0; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName('td');
+        let found = false;
+        for (let j = 0; j < cells.length; j++) {
+          if (cells[j].innerText.toLowerCase().includes(input)) {
+            found = true;
+            break;
+          }
+        }
+        rows[i].style.display = found ? '' : 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>

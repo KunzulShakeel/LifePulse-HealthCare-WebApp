@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Patient Reports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #e9fafa;
+      color: #263238;
+    }
+
+    header {
+      background-color: #009688;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .container h2 {
+      text-align: center;
+      color: #00796B;
+      margin-bottom: 30px;
+    }
+
+    .report-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .report-form label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+      color: #37474f;
+    }
+
+    .report-form input,
+    .report-form select,
+    .report-form textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .report-form textarea {
+      grid-column: 1 / -1;
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .submit-btn {
+      grid-column: 1 / -1;
+      padding: 12px 20px;
+      background-color: #009688;
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #00796B;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #00796B;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .report-form {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📤 Upload Patient Reports</h1>
+  </header>
+
+  <div class="container">
+    <h2>Upload a Report</h2>
+    <form class="report-form">
+      <div>
+        <label for="patientName">Patient Name</label>
+        <input type="text" id="patientName" placeholder="e.g. Sara Ali">
+      </div>
+
+      <div>
+        <label for="reportType">Report Type</label>
+        <select id="reportType">
+          <option>Blood Test</option>
+          <option>Chest X-Ray</option>
+          <option>DNA Test</option>
+          <option>Vaccine Certificate</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="reportDate">Date</label>
+        <input type="date" id="reportDate">
+      </div>
+
+      <div>
+        <label for="fileUpload">Upload File</label>
+        <input type="file" id="fileUpload">
+      </div>
+
+      <div>
+        <label for="description">Report Description</label>
+        <textarea id="description" placeholder="Write a short summary or note about the report..."></textarea>
+      </div>
+
+      <button class="submit-btn">Upload Report</button>
+    </form>
+
+    <a href="doctor-dashboard.html" class="back-link">← Back to Dashboard</a>
+  </div>
+
+</body>
+</html>

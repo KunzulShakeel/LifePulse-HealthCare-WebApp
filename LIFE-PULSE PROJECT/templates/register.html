@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
+
+    .register-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+      width: 420px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    h2 {
+      text-align: center;
+      color: #009688;
+      margin-bottom: 25px;
+      animation: slideDown 1s ease;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #009688;
+      border-radius: 10px;
+      box-sizing: border-box;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    input:focus, select:focus {
+      border-color: #00796b;
+      box-shadow: 0 0 8px #00796b;
+      outline: none;
+    }
+
+    .password-message {
+      font-size: 12px;
+      margin-top: -8px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #009688;
+      color: white;
+      padding: 14px;
+      margin-top: 18px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00796b;
+    }
+
+    .modal {
+      display: block;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 300px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .close {
+      color: #aaa;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .other-religion-box {
+    display: none;
+    margin-top: 10px;
+  }
+
+  select:has(option:checked[value="Other"]) ~ .other-religion-box {
+    display: block;
+  }
+
+  </style>
+</head>
+<body>
+
+<div class="register-container">
+  <h2>Register</h2>
+  <form>
+    <input type="text" placeholder="Full Name" required>
+    <input type="text" placeholder="Middle Name (optional)">
+    <input type="text" placeholder="Last Name" required>
+    <input type="date" placeholder="Date of Birth" required>
+    <input type="text" placeholder="Street Address" required>
+    <input type="text" placeholder="Street Address Line 2">
+
+    <select id="Country" required onchange="document.getElementById('other-box').style.display = this.value === 'Other' ? 'block' : 'none';">
+      <option value="" disabled selected hidden>🌍 Select Country</option>
+      <option>United States</option>
+      <option>United Kingdom</option>
+      <option>Canada</option>
+      <option>Pakistan</option>
+      <option>Saudi Arabia</option>
+      <option>India</option>
+      <option>Australia</option>
+      <option>Germany</option>
+      <option>France</option>
+      <option>Brazil</option>
+      <option>South Africa</option>
+    </select>
+
+    <select id="City" required onchange="document.getElementById('other-box').style.display = this.value === 'Other' ? 'block' : 'none';">
+      <option value="" disabled selected hidden>🏙️ Select City</option>
+      <option>Karachi</option>
+      <option>Lahore</option>
+      <option>Islamabad</option>
+      <option>Jeddah</option>
+      <option>Riyadh</option>
+      <option>New York</option>
+    </select>
+
+    <input type="text" placeholder="Postal / ZIP Code" required>
+
+    <select id="Gender" required onchange="document.getElementById('other-box').style.display = this.value === 'Other' ? 'block' : 'none';">
+      <option value="" disabled selected hidden>🚻 Select Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+
+    <select id="religion" required onchange="document.getElementById('other-box').style.display = this.value === 'Other' ? 'block' : 'none';">
+      <option value="" disabled selected hidden>🛐 Select Religion</option>
+      <option>Islam</option>
+      <option>Christianity</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <div id="other-box" class="other-religion-box">
+      <input type="text" placeholder="Please specify your religion" />
+    </div>
+
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="Mobile Number" required>
+    <input type="password" placeholder="Password" required>
+    <div class="password-message">Enter a strong password</div>
+    <input type="password" placeholder="Confirm Password" required>
+
+    <button type="submit">Register</button>
+  </form>
+</div>
+</body>
+</html>

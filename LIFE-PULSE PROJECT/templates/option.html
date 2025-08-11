@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LifePulse Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-box {
+      background-color: #fff;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      width: 320px;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #00b3b3;
+    }
+
+    .heart {
+      color: red;
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    h2 {
+      margin: 20px 0;
+      font-size: 22px;
+    }
+
+    .role-selection {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .role-selection button {
+      width: 48%;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #00b3b3, #007a7a);
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .role-selection button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #00cccc, #009999);
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <div class="logo">Life<span>Pulse</span></div>
+    <div class="heart">❤️</div>
+    <h2>Log in as</h2>
+    <div class="role-selection">
+      <button type="button" onclick="window.location.href='patient-login.html'">Patient</button>
+      <button type="button" onclick="window.location.href='doctor-login.html'">Doctor</button>
+      
+    </div>
+  </div>
+</body>
+</html>

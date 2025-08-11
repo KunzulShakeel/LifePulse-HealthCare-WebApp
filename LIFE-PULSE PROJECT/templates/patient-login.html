@@ -1,0 +1,131 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  <title>LifePulse Login</title>  
+  <style>  
+    body {  
+      margin: 0;  
+      font-family: Arial, sans-serif;  
+      background-color: #f2f2f2;  
+      display: flex;  
+      justify-content: center;  
+      align-items: center;  
+      height: 100vh;  
+    }  
+
+    .container {  
+      background-color: #ffffff;  
+      padding: 20px 15px;  /* Adjusted padding for the container */  
+      border-radius: 12px;  
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  
+      text-align: center;  
+      width: 100%;  
+      max-width: 400px;  /* Restored previous max-width */  
+    }  
+
+    .logo {  
+      font-size: 28px;  
+      font-weight: bold;  
+    }  
+
+    .logo span {  
+      color: #00bfa6; /* teal */  
+    }  
+
+    .heart {  
+      font-size: 30px;  
+      color: red;  
+      margin: 10px 0;  
+    }  
+
+    h2 {  
+      margin: 10px 0 15px;  
+      font-size: 24px;  
+    }  
+
+    input[type="email"],  
+    input[type="password"] {  
+      width: 100%;  
+      padding: 10px;  
+      margin: 8px 0;  
+      box-sizing: border-box;  
+      border: 1px solid #ccc;  
+      border-radius: 8px;  
+      font-size: 14px;  
+    }  
+
+    .forgot {  
+      text-align: right;  
+      font-size: 12px;  
+      color: #555;  
+      margin-top: 5px;  
+      margin-bottom: 15px;  
+    }  
+
+    button {  
+      width: auto;    
+      background-color: #00bfa6;   
+      color: white;  
+      padding: 10px 50px;   
+      border: none;  
+      border-radius: 8px;   
+      font-size: 14px;    
+      font-weight: bold;  
+      cursor: pointer;  
+      transition: background-color 0.3s ease;  
+    }  
+
+    button:hover {  
+      background-color: #009e8c;  
+    }  
+
+    .link {  
+      margin-top: 15px;  
+      font-size: 12px;  
+    }  
+
+    .link a {  
+      color: #00bfa6;  
+      font-weight: bold;  
+      text-decoration: none;  
+      transition: color 0.3s ease;  
+    }  
+
+    .link a:hover {  
+      text-decoration: underline;  
+      color: #009e8c;  
+    }  
+
+    .Back-link {  
+      margin-top: 10px;  
+      display: block;  
+      font-size: 12px;  
+      color: #007a7a;  
+      text-decoration: none;  
+    }  
+
+    .Back-link:hover {  
+      text-decoration: underline;  
+    }  
+  </style>  
+</head>  
+<body>  
+  <div class="container">  
+    <div class="logo">Life<span>Pulse</span></div>  
+    <div class="heart">❤️</div>  
+    <h2>Log in</h2>  
+    <form onsubmit="location.href='patient-dashboard.html'; return false;">  
+      <input type="email" placeholder="Email" required />  
+      <input type="password" placeholder="Password" required />  
+      <div class="forgot">Forgot password?</div>  
+      <button type="submit">Log in</button> <!-- Smaller button -->  
+    </form><br>  
+    <div class="link">  
+      Don’t have an account? <a href="register.html">Register</a>  
+    </div>  
+    <a href="option.html" class="Back-link">← Back to Role Selection</a>  
+  </div>  
+</body>  
+</html>

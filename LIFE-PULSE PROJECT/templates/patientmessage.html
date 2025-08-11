@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LifePulse | Messages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f4fdfd;
+      color: #333;
+    }
+
+    nav {
+      background-color: #009688;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .container h1 {
+      color: #009688;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .message-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .message-card {
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    .message-card:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .message-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .message-header h3 {
+      font-size: 18px;
+      color: #00796b;
+    }
+
+    .timestamp {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .message-preview {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .no-messages {
+      text-align: center;
+      color: #666;
+      margin-top: 50px;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #009688;
+      color: white;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    .back-link {
+      margin-top: 20px;
+      display: inline-block;
+      color: #009688;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">LifePulse ❤️</div>
+    <ul>
+      <li><a href="patient-dashboard.html">Home</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Messages Section -->
+  <div class="container">
+    <h1>💬 Messages</h1>
+
+    <div class="message-list">
+
+      <!-- Message Card Example -->
+      <div class="message-card">
+        <div class="message-header">
+          <h3>Dr. Sarah Ahmed</h3>
+          <span class="timestamp">May 21, 2025 • 2:15 PM</span>
+        </div>
+        <div class="message-preview">
+          Your test results are back. Everything looks good. Let’s schedule a follow-up...
+        </div>
+      </div>
+
+      <div class="message-card">
+        <div class="message-header">
+          <h3>Dr. Ali Raza</h3>
+          <span class="timestamp">May 18, 2025 • 10:45 AM</span>
+        </div>
+        <div class="message-preview">
+          Remember to monitor your blood pressure twice daily and report any headaches.
+        </div>
+      </div>
+      <a href="patient-dashboard.html" class="back-link">← Back to Dashboard</a>
+
+      <!-- If No Messages -->
+      <!-- <div class="no-messages">
+        You have no new messages.
+      </div> -->
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 LifePulse. All rights reserved. | Contact: support@lifepulse.com
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Lab Reports</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e0f2f1;
+      color: #37474f;
+    }
+
+    header {
+      background-color: #009688;
+      padding: 20px 40px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
+      padding: 30px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #00796B;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid #b2dfdb;
+    }
+
+    th {
+      background-color: #e0f2f1;
+      color: #00796B;
+      font-weight: 600;
+    }
+
+    .view-btn {
+      background-color: #00796B;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .view-btn:hover {
+      background-color: #004d40;
+    }
+
+    .back-link {
+      margin-top: 20px;
+      display: block;
+      text-align: center;
+      color: #00796B;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #004d40;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+      color: #607d8b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🔬 Dr. Ahmed — Lab Reports
+  </header>
+
+  <div class="container">
+    <h2>Patient Lab Reports</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Patient Name</th>
+          <th>Disease</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sara Ali</td>
+          <td>Diabetes</td>
+          <td><button class="view-btn">View Reports</button></td>
+        </tr>
+        <tr>
+          <td>Bilal Khan</td>
+          <td>Chest Infection</td>
+          <td><button class="view-btn">View Reports</button></td>
+        </tr>
+        <tr>
+          <td>Ayesha Noor</td>
+          <td>Hypertension</td>
+          <td><button class="view-btn">View Reports</button></td>
+        </tr>
+        <tr>
+          <td>Usman Tariq</td>
+          <td>Asthma</td>
+          <td><button class="view-btn">View Reports</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <a href="doctor-dashboard.html" class="back-link">← Back to Dashboard</a>
+
+  <div class="footer">
+    &copy; 2025 Dr. Ahmed's Clinic
+  </div>
+</body>
+</html>

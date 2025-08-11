@@ -1,0 +1,92 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>LifePulse</title>  
+    <style>  
+        body {  
+            margin: 0;  
+            font-family: 'Arial', sans-serif;  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            min-height: 100vh;  
+            background: linear-gradient(to right, #ece9e6, #ffffff);  
+            text-align: center;  
+            color: #333;  
+        }  
+
+        .container {  
+            padding: 20px;  
+            background: white;  
+            border-radius: 15px;  
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  
+            max-width: 600px;  
+            width: 90%;  
+            transition: transform 0.3s;  
+        }  
+
+        .container:hover {  
+            transform: translateY(-5px);  
+        }  
+
+        h1 {  
+            font-size: 3rem;  
+            margin-bottom: 10px;  
+            line-height: 1.2;  
+        }  
+
+        .highlight {  
+            color: #00bcd4; /* Color for 'LifePulse' */  
+            font-weight: bold;  
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);  
+        }  
+
+        p {  
+            font-size: 1.25rem;  
+            margin: 10px 0;  
+            line-height: 1.5;  
+        }  
+
+        .get-started {  
+            padding: 12px 25px;  
+            font-size: 1rem;  
+            color: white;  
+            background-color: #333; /* Dark button background */  
+            border: none;  
+            border-radius: 25px;  
+            cursor: pointer;  
+            transition: background-color 0.3s, transform 0.3s;  
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+        }  
+
+        .get-started:hover {  
+            background-color: #555; /* Slightly lighter on hover */  
+            transform: scale(1.05);  
+        }  
+
+        /* Responsive Styling */  
+        @media (max-width: 600px) {  
+            h1 {  
+                font-size: 2.5rem;  
+            }  
+            p {  
+                font-size: 1rem;  
+            }  
+            .get-started {  
+                padding: 10px 20px;  
+                font-size: 0.9rem;  
+            }  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="container">  
+        <h1>WELCOME to <span class="highlight">LifePulse</span></h1>  
+        <p>Where Health Begins.</p>  
+        <p>Caring for every heartbeat — with tech, trust, and compassion.❤️</p>  
+        <button class="get-started" onclick="location.href='option.html'">Get Started</button>  
+    </div>  
+</body>  
+</html>

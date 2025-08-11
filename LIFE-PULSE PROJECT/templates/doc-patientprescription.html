@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Write Prescription</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #e0f2f1;
+      color: #37474f;
+    }
+
+    header {
+      background-color: #009688;
+      padding: 20px 40px;
+      border-bottom: 4px solid #00796B;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #ffffff;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #00796B;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #b2dfdb;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      font-size: 16px;
+      background-color: #f9f9f9;
+      transition: border-color 0.3s;
+      color: #37474f;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #009688;
+      background-color: #ffffff;
+    }
+
+    button {
+      background-color: #00796B;
+      color: #ffffff;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    .back-link {
+      margin-top: 20px;
+      display: block;
+      text-align: center;
+      color: #00796B;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+      cursor: pointer;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #004d40;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 24px;
+        margin: 20px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🩺 Write Prescription</h1>
+  </header>
+
+  <div class="container">
+    <h2>Patient Prescription Form</h2>
+    <form>
+      <label for="patientName">Patient Name</label>
+      <input type="text" id="patientName" name="patientName" placeholder="Enter patient's full name" required>
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" placeholder="Enter age" required>
+
+      <label for="symptoms">Symptoms</label>
+      <textarea id="symptoms" name="symptoms" rows="3" placeholder="Describe symptoms" required></textarea>
+
+      <label for="medications">Medications</label>
+      <textarea id="medications" name="medications" rows="4" placeholder="List medications and dosages" required></textarea>
+
+      <label for="notes">Doctor's Notes</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Additional instructions or observations"></textarea>
+
+      <button type="submit">💊 Submit Prescription</button>
+    </form>
+  </div>
+
+  <a href="doctor-dashboard.html" class="back-link">← Back to Dashboard</a>
+
+</body>
+</html>
